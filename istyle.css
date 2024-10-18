@@ -1,0 +1,127 @@
+.header{
+    background:  burlywood;
+    width: 100%;
+    height: 150px;
+
+}
+body{
+    margin: 0;
+}
+.img{
+    width: 200px;
+    height: 150px;
+}
+.font{
+    font-size: 120px;
+    position: absolute;
+    top: 0;
+    left: 500px;
+    font-style: initial;
+}
+.desc{
+    font-size: 20px;
+}
+.cover1{
+    position: absolute;
+    left: 100px;
+    top: 550px;
+    width: 300px;
+    border-radius: 10%;
+}
+.cover2{
+    position: absolute;
+    left: 600px;
+    top: 700px;
+    width: 300px;
+    height: 350px;
+    border-radius: 10%;
+}
+.cover3{
+    position: absolute;
+    left: 600px;
+    top: 300px;
+    width: 300px;
+    height: 350px;
+    border-radius: 10%;
+}
+.line{
+    position: absolute;
+    top: 320px;
+    left: 350px;
+}
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; */
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(./main.jpg);
+    background-size: cover;
+}
+.box{
+    position: relative;
+    width: 200px;
+    height: 300px;
+    transform-style: preserve-3d;
+    animation: animate 20s linear infinite;
+    top: 1300px;
+    left: 650px;
+}
+@keyframes animate{
+    0% {
+        transform: perspective(1000px)rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px)rotateY(360deg);
+    }
+}
+
+.box span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg))translateZ(400px);
+    -webkit-box-reflect:below 0px linear-gradient(transparent,transparent,#0004);
+
+}
+.box span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+.q{
+    position: absolute;
+    top: 1010px;
+    left: 30px;
+    font-size: 60px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.cpy{
+    position: absolute;
+    top: 2000px;
+    left: 550px;
+}
+.navbar{
+    position: absolute;
+    right: 100px;
+    top: 400px;
+}
+.covers{
+    position: absolute;
+    top: 2100px;
+    width: 100%;
+    background-color:grey;
+
+}
